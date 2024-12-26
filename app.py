@@ -8,14 +8,12 @@ st.set_page_config(page_title='HDB Flat Resale Price Predictor', page_icon='hous
                     layout='wide')
 
 # Columns for logo and title
-col1, col2 = st.columns([1, 5])  # 1 for logo, 3 for title
+col1, col2 = st.columns([1, 5])
 
-with col1:
-    # Display the logo in the left corner
+with col1:   
     st.image("hdb.png", width=100)
 
-with col2:
-    # Display the title beside the logo, left-aligned with a larger font size
+with col2:   
     st.markdown(
         "<h1 style='color: red; font-size: 45px; text-align: left;'>🏠 Singapore Resale Flat Price Prediction</h1>",
         unsafe_allow_html=True
@@ -35,7 +33,7 @@ selected = option_menu(
         "nav-link-selected": {"background-color": "#247579"},
     })
 
-# User input values for selectbox and encoding for respective features
+# User input values for select box and encoding for respective features
 class option:
     option_months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     
